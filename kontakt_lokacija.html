@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lagn='hr'>
+	<head>
+
+		<meta charset='UTF-8'>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewprot" content="width = device-width, initial-scale = 1">
+		<title>Opto Contact</title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="css/opto.css">
+		<style type="text/css">
+		/* Jumbatron img and txt postavke */ 
+			.menu_jumb {
+			background-image: url(img/Optocontact_oko.gif);
+			}
+			.active {
+				background-color: #e74517 !important ;
+				border-top-left-radius: 5px !important;
+				border-top-right-radius: 5px !important;
+			}
+			.txt-h1 {
+				margin-top: -20px !important;
+    			text-align: right;
+    			font-size: 30px !important;
+				}
+			.text-right {
+				margin-top: 252px !important;
+			}
+		/* END Jumbatron img and txt postavke */
+			.prvi {
+				padding: 40px;
+    			background: #ebebeb;
+    			border-radius: 10px;
+    			margin-bottom: 50px;
+    		}
+        #map1 {
+          border: 4px solid white;
+          border-radius: 10px;
+          box-shadow: 1px 8px 19px 1px #707070;
+          margin-bottom: 40px !important;
+        }
+        #map2 {
+          border: 4px solid white;
+          border-radius: 10px;
+          box-shadow: 1px 8px 20px 1px #707070;
+          margin-bottom: 40px !important;
+        }
+    		.prvi > p {
+    			margin-top: 30px;
+
+    		}
+    		.prvi > p > span {
+    			font-weight: bold !important;
+          font-size: 25px;
+    		}
+    		.prvi > p > a {
+    			font-weight: bold !important;
+    		}
+
+    		@media (min-width: 1200px) {
+    			.prvi {
+    				padding-left: 60px;
+    			}
+    		}
+    		@media (max-width: 992px) {
+				.font {
+					font-size: 25px;
+					padding-left: 0px;
+					padding-right: 0px;
+				}
+        .prvi > p > span {
+          
+          font-size: 35px !important;
+        }
+        #map1 {
+          margin: 0px !important;
+
+        }
+
+        #map2 {
+          margin: 0px !important;
+        }
+        .prvi {
+          padding: 0px;
+        }
+				.prvi > p {
+          text-align: center;
+          padding: 0px !important;
+          margin-top: 40px;
+          margin-bottom: 40px;
+    			}
+    			
+			}
+        .posebni {
+        font-weight: bold !important;
+        font-size: 25px;
+        color: black;
+        }
+        .st-gumb:hover {
+                color: #ffffff;
+                background-color: #080808;
+                border-color: #080808;
+            }
+            .zg-gumb:hover {
+                color: #080808;
+                background-color: #ffffff;
+                border-color: #ffffff;
+            }
+            .txt-h1 {
+                font-weight: bold;
+            }
+                  .prvi > p > a:hover {
+        color: black !important;
+        text-decoration: none !important;
+      cursor: default !important;
+      }
+
+		</style>
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBYuiGyUmTwQu7Ff1zNtRlorp9S5GhTIZE"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>	
+		
+		<script >
+		var map;
+		function initialize() {
+  		var mapOptions = {
+    		zoom: 15,
+    		center: {lat:45.8116973, lng:15.9483985}
+  			};
+  			map = new google.maps.Map(document.getElementById('map1'),
+     		mapOptions);
+
+  		var marker = new google.maps.Marker({
+    		position: {lat:45.8116973, lng:15.9483985},
+    		map: map});
+
+  		var mapOptions = {
+    		zoom: 15,
+    		center: {lat:43.5052271, lng:16.4658763}
+  			};
+  			map = new google.maps.Map(document.getElementById('map2'),
+     		mapOptions);
+
+  		var marker = new google.maps.Marker({
+    		position: {lat:43.5052271, lng:16.4658763},
+    		map: map});
+
+  			google.maps.event.addListener(marker, 'click', function() {
+  	  		infowindow.open(map, marker);
+  			});
+		}
+
+			google.maps.event.addDomListener(window, 'load', initialize);
+
+	</script>
+	</head>
+	<body>
+			
+		<div id="preload">
+   			<img src="img/Background2.png" width="1" height="1" alt="Image 02" />
+   			<img src="img/Background3.png" width="1" height="1" alt="Image 03" />
+		</div>
+	<header>
+		<nav class="navbar navbar-default navbar-static-top menu_pozadina">
+      		<div class="container mob-container" style="padding-left: 0px; padding-right: 0px;">
+        		<div class="navbar-header">
+          			<button type="button" class="navbar-toggle uarr " data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            		<span class="icon-bar"></span>
+            		<span class="icon-bar"></span>
+            		<span class="icon-bar"></span>
+            		<span class="icon-bar"></span>
+            		
+          			</button>
+          			<a class="navbar-brand" href="index.html"><img src="img/logo2.png" class="img-responsive" id="slika_jumb"></a>
+        		</div>
+        	<div id="navbar" class="navbar-collapse collapse in">
+          		<ul class="nav navbar-nav navbar-toggleable-md">
+           	 		<li id="jedan"><a  href="o_nama.html">O nama</a></li>
+            		<li id="dva"><a id="drugi" class="active" href="kontakt_lokacija.html">Kontakt &amp; lokacija</a></li>
+            		<li id="tri"><a href="kontaktne_lece.html">Kontaktne leće</a></li>
+            		<li id="cetri"><a id="cetvrti" href="proizvodnja_leca.html">Proizvodnja leća</a></li>
+            		<li id="pet"><a id="zakrivljen_d" href="proizvodi.html">Proizvodi</a></li>
+            		</li>
+          		</ul>
+        	</div><!--/.nav-collapse -->
+        <div class="jumbotron menu_jumb img-shadow">
+        	<h1 class="txt-h1">Kontakt &amp; lokacija</h1>
+        	<p class="text-right"> <a class="btn btn-primary btn-lg zg-gumb	" role="button">Zagreb</a> Tel: +385 (1) 3772 304 </br> Fax: +385 (1) 3772 418 </p> <p class="text-right"> <a class="btn btn-primary btn-lg st-gumb" role="button">Split</a>Tel: +385 (21) 312 299</br> Fax: +385 (21) 312 303 </p>
+        </div>
+      </div>
+    	</nav>
+	</header>
+		<div class="container font">
+			<div class="row">
+				<div class="container prvi" >
+				<p class="col-lg-3 col-md-4 col-sm-12 col-xs-12"> <a name="Zagreb" class="posebni"><span>Zagreb</span></a> </br> </br>Tel.: +385 (1) 3772 034</br>Fax: +385 (1) 3772 418</br>Adresa:</br>OPTO CONTACT</br>Vodovodna 10</p>
+				<div class="col-lg-8 col-md-7 col-sm-12 col-xs-12" id="map1" style="height: 400px ; margin: 5px;"></div>
+				<p class="col-lg-3 col-md-4 col-sm-12 col-xs-12"> <a name="Split" class="posebni"><span>Split</span></a> </br></br>Tel.: +385 (21) 312 299</br>Fax: +385 (21) 312 303</br>Adresa:</br>OPTO CONTACT</br>Ruđera Boškovića 6</p>
+				<div class="col-lg-8 col-md-7 col-sm-12 col-xs-12" id="map2" style="height: 400px ; margin: 5px;"></div>
+				<p class="col-lg-12 col-md-12 col-sm-12 col-xs-12" align="center">email: <a href="mailto: optocontact@optocontact.hr">optocontact@optocontact.hr</a> </br></br> OPTO CONTACT d.o.o. za proizvodnju i usluge</br>Vodovodna 10, 10000 Zagreb, Hrvatska</br>Upisan u Sudski registar Trgovačkog suda u Zagrebu pod brojem </br> MBS:080987292;</br> OIB:40231422869.</br>Temeljni kapital 20.000,00 kn uplaćen u cijelosti.</br>IBAN:HR4623600001102498244</br>Direktorica:Helena Dobrić
+			</div>
+				
+				<div class="container"></div>
+			</div>
+		</div>
+
+	<div class="footer">
+		<p>&copy; OPTO CONTACT 2017. Sva prava pridržana</p>
+	</div>
+	</body>

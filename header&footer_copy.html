@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lagn='hr'>
+	<head>
+
+		<meta charset='UTF-8'>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewprot" content="width = device-width, initial-scale = 1">
+		<title>Opto Contact</title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="css/opto.css">
+		<style type="text/css"> 
+			.menu_jumb {
+			background-image: url(img/Background.png);
+			}	
+		</style>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>	
+		<script  type="text/javascript"> 
+			$(document).ready(function () {
+    	var fundoimg = 1;
+    	var carrossel = function () {
+        	if(fundoimg === 1) {
+          	  $(".menu_jumb").css("background-image","url('img/Background2.png')");
+          	  fundoimg = 2;
+       	 	} else if (fundoimg === 2) {
+           		 $(".menu_jumb").css("background-image","url('img/Background.png')");
+            	fundoimg = 3;
+        	} else {
+        		$(".menu_jumb").css("background-image","url('img/Background3.png')");
+            fundoimg=1;
+        	}
+    	}
+    	setInterval(carrossel,2000);
+		});
+		</script>
+	</head>
+	<body>
+			
+		<div id="preload">
+   			<img src="img/Background2.png" width="1" height="1" alt="Image 02" />
+   			<img src="img/Background3.png" width="1" height="1" alt="Image 03" />
+		</div>
+	<header>
+		<nav class="navbar navbar-default navbar-static-top menu_pozadina">
+      		<div class="container mob-container" style="padding-left: 0px; padding-right: 0px;">
+        		<div class="navbar-header">
+          			<button type="button" class="navbar-toggle uarr collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            		<span class="icon-bar"></span>
+            		<span class="icon-bar"></span>
+            		<span class="icon-bar"></span>
+            		<span class="icon-bar"></span>
+            		<span class="icon-bar"></span>
+          			</button>
+          			<a class="navbar-brand" href="#"><img src="img/logo2.png" class="img-responsive" id="slika_jumb"></a>
+        		</div>
+        	<div id="navbar" class="navbar-collapse collapse">
+          		<ul class="nav navbar-nav navbar-toggleable-md">
+           	 		<li id="jedan"><a id="zakrivljen_lj" href="#">O nama</a></li>
+            		<li id="dva"><a id="drugi" href="#about">Kontakt &amp; lokacija</a></li>
+            		<li id="tri"><a href="#contact">Kontaktne leće</a></li>
+            		<li id="cetri"><a id="cetvrti" href="#contact">Proizvodnja leća</a></li>
+            		<li id="pet"><a id="zakrivljen_d" href="#contact">Proizvodi</a></li>
+            		</li>
+          		</ul>
+        	</div><!--/.nav-collapse -->
+        <div class="jumbotron menu_jumb img-shadow">
+        	<p class="text-right"> <a class="btn btn-primary btn-lg zg-gumb	" role="button">Zagreb</a> Tel: +385 (1) 3772 304 </br> Fax: +385 (1) 3772 418 </p> <p class="text-right"> <a class="btn btn-primary btn-lg st-gumb" role="button">Split</a>Tel: +385 (21) 312 299</br> Fax: +385 (21) 312 303 </p>
+        </div>
+      </div>
+    	</nav>
+	</header>
+
+	<div class="footer">
+		<p>&copy; OPTO CONTACT 2017. Sva prava pridržana</p>
+	</div>
+	</body>

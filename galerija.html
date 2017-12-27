@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lagn='hr'>
+	<head>
+
+		<meta charset='UTF-8'>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewprot" content="width = device-width, initial-scale = 1">
+		<title>Opto Contact</title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="css/opto.css">
+		<link rel="stylesheet" type="text/css" href="fancybox-2.1.7/source/jquery.fancybox.css" media="screen">
+		<style type="text/css">
+		/* Jumbatron img and txt postavke */ 
+			.menu_jumb {
+			background-image: url(img/Optocontact_oko.gif);
+			}
+			.active {
+				background-color: #ffcf09 !important ;
+				border-top-left-radius: 5px !important;
+				border-top-right-radius: 5px !important;
+			}
+			.txt-h1 {
+				margin-top: -20px !important;
+    			text-align: right;
+    			font-size: 30px !important;
+				}
+			.text-right {
+				margin-top: 252px !important;
+			}
+		/* END Jumbatron img and txt postavke */
+		.prvi {
+				padding: 10px;
+    			background: #ebebeb;
+    			border-radius: 10px;
+    			margin-bottom: 15px;}
+		.gallery-title
+			{
+			    font-size: 36px;
+			    color: black;
+			    text-align: center;
+			    font-weight: 500;
+			    margin-bottom: 70px;
+			}
+			.gallery-title:after {
+			    content: "";
+			    position: absolute;
+			    width: 7.5%;
+			    left: 46.5%;
+			    height: 45px;
+			    border-bottom: 1px solid #5e5e5e;
+			}
+			.filter-button
+			{
+			    font-size: 18px;
+			    border: 1px solid #42B32F;
+			    border-radius: 5px;
+			    text-align: center;
+			    color: #42B32F;
+			    margin-bottom: 30px;
+
+			}
+			
+			.btn-default:active .filter-button:active
+			{
+			    background-color: #42B32F;
+			    color: white;
+			}
+
+			.port-image
+			{
+			    width: 100%;
+			}
+
+		
+
+			#one {
+				border:1px solid  #ffffff;
+                background-color: #ffcc01 ;
+                color: #ffffff ;
+
+			}
+			#one:hover {
+				border:1px solid  #ffcc01;
+			    color: #ffcc01 !important;
+                background-color: #ffffff !important;
+			}	
+			#two {
+                border: 1px solid #ffffff;
+                background-color: #e74516 !important;
+                color: #ffffff !important;
+				
+			}
+			#two:hover {
+				border: 1px solid #e74516;
+                color: #e74516 !important;
+                background-color: #ffffff !important; 
+			}
+			#thre {
+                background-color: #304596 !important;
+                color: #ffffff !important;
+				border: 1px solid #ffffff;
+				color: #304596;
+			}
+			#thre:hover {
+				background-color: #ffffff !important;
+				color: #304596 !important;
+                border-color: #304596;
+			}
+			#four {
+				border: 1px solid #ffffff;
+				color: #42B32F;
+                background-color: #42B32F !important;
+                color: #ffffff;
+			}
+			#four:hover {
+				background-color: #ffffff !important;
+				color: #42B32F;
+                border-color: #42B32F;
+			}
+				.galerija
+			{
+    			display: inline-block;
+    			margin-top: 20px;
+			}
+
+			.img-responsive, .thumbnail > img, .thumbnail a > img, .carousel-inner > .item > img, .carousel-inner > .item > a > img {
+				display: inline-table !important;
+			}
+            .st-gumb:hover {
+                color: #ffffff;
+                background-color: #080808;
+                border-color: #080808;
+            }
+            .zg-gumb:hover {
+                color: #080808;
+                background-color: #ffffff;
+                border-color: #ffffff;
+            }
+            .txt-h1 {
+                font-weight: bold;
+            }
+
+            
+		</style>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>	
+		
+		<script src="fancybox-2.1.7/source/jquery.fancybox.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+
+    			$(".filter-button").click(function(){
+        		var value = $(this).attr('data-filter');
+        
+        		if(value == "all")
+        		{
+           		 //$('.filter').removeClass('hidden');
+            	$('.filter').show('1000');
+        		}
+        		else
+        	{
+//            		$('.filter[filter-item="'+value+'"]').removeClass('hidden');
+		//            		$(".filter").not('.filter[filter-item="'+value+'"]').addClass('hidden');
+		            $(".filter").not('.'+value).hide('1000');
+            		$('.filter').filter('.'+value).show('1000');
+            
+       		 }
+    	});
+    
+    		if ($(".filter-button").removeClass("active")) {
+			$(this).removeClass("active");
+		}
+			$(this).addClass("active");
+
+						$(".fancybox")
+							.fancybox( {
+							openEffect	: 'none',
+							closeEffect	: 'none'
+						}); 
+
+		}); 
+		
+
+    		
+
+		
+		</script>
+	</head>
+	<body>
+			
+		<div id="preload">
+   			<img src="img/Background2.png" width="1" height="1" alt="Image 02" />
+   			<img src="img/Background3.png" width="1" height="1" alt="Image 03" />
+		</div>
+	<header>
+		<nav class="navbar navbar-default navbar-static-top menu_pozadina">
+      		<div class="container mob-container" style="padding-left: 0px; padding-right: 0px;">
+        		<div class="navbar-header">
+          			<button type="button" class="navbar-toggle uarr" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            		<span class="icon-bar"></span>
+            		<span class="icon-bar"></span>
+            		<span class="icon-bar"></span>
+            		<span class="icon-bar"></span>
+            		
+          			</button>
+          			<a class="navbar-brand" href="index.html"><img src="img/logo2.png" class="img-responsive" id="slika_jumb"></a>
+        		</div>
+        	<div id="navbar" class="navbar-collapse collapse in">
+          		<ul class="nav navbar-nav navbar-toggleable-md">
+           	 		<li id="jedan"><a href="o_nama.html">O nama</a></li>
+            		<li id="dva"><a id="drugi" href="kontakt_lokacija.html">Kontakt &amp; lokacija</a></li>
+            		<li id="tri"><a href="kontaktne_lece.html">Kontaktne leće</a></li>
+            		<li id="cetri"><a id="cetvrti" href="proizvodnja_leca.html">Proizvodnja leća</a></li>
+            		<li id="pet"><a id="zakrivljen_d" href="proizvodi.html">Proizvodi</a></li>
+            		</li>
+          		</ul>
+        	</div><!--/.nav-collapse -->
+        <div class="jumbotron menu_jumb img-shadow">
+        	<h1 class="txt-h1">Galerija</h1>
+        	<p class="text-right"> <a class="btn btn-primary btn-lg zg-gumb	" role="button" href="kontakt_lokacija.html#Zagreb">Zagreb</a> Tel: +385 (1) 3772 304 </br> Fax: +385 (1) 3772 418 </p> <p class="text-right"> <a class="btn btn-primary btn-lg st-gumb" role="button" href="kontakt_lokacija.html#Split">Split</a>Tel: +385 (21) 312 299</br> Fax: +385 (21) 312 303 </p>
+        </div>
+      </div>
+    	</nav>
+	</header>
+	<div class="container prvi ">
+        <div class="row" style="margin: 0px !important;">
+        
+
+        <div align="center" style="margin-top: 40px;">
+            <button id="four" class="btn btn-default filter-button one" data-filter="all">SVE SLIKE</button>
+            <button id="one" class="btn btn-default filter-button one" data-filter="optoform">POGON</button>
+            <button id="two" class="btn btn-default filter-button" data-filter="pogon">OSTALI ARTIKLI</button>
+            <button id="thre" class="btn btn-default filter-button" data-filter="zagreb">PRODAJNI PROSTOR</button>
+            <button id="four" class="btn btn-default filter-button" data-filter="split">NAOČALE</button>
+        </div>
+        <br/>
+
+
+
+            <div class="gallery_product col-lg-4 col-md-4 col-sm-6 col-xs-6 filter optoform">
+            	<a  class="thumbnail fancybox" rel="optoform" href="img/galerija/b_g41.jpg" >
+                <img src="img/galerija/b_g41.jpg" />
+            	</a>
+            </div>
+
+            <div class="gallery_product col-lg-4 col-md-4 col-sm-6 col-xs-6 filter optoform">
+            	<a  class="thumbnail fancybox" rel="optoform" href="img/galerija/b_g42.jpg" >
+                <img src="img/galerija/b_g42.jpg" >
+            	</a>
+            </div>
+
+            <div data-fancybox="galerija" class="gallery_product col-lg-4 col-md-4 col-sm-6 col-xs-6 filter optoform">
+            	<a class="thumbnail fancybox" rel="optoform" href="img/galerija/b_g43.jpg">
+                <img src="img/galerija/b_g43.jpg"  class="img-responsive">
+            	</a>
+            </div>
+
+            <div class="gallery_product col-lg-4 col-md-4 col-sm-6 col-xs-6 filter optoform">
+            	<a class="thumbnail fancybox" rel="optoform" href="img/galerija/b_g44.jpg">
+                <img src="img/galerija/b_g44.jpg"  class="img-responsive">
+            </a>
+            </div>
+
+            <div class="gallery_product col-lg-4 col-md-4 col-sm-6 col-xs-6 filter optoform">
+            	<a class="thumbnail fancybox" rel="optoform" href="img/galerija/b_g45.jpg">
+                <img src="img/galerija/b_g45.jpg" rel="optoform" class="img-responsive">
+            	</a>
+            </div>
+
+             <div class="gallery_product col-lg-4 col-md-4 col-sm-6 col-xs-6 filter optoform">
+             	<a class="thumbnail fancybox" rel="optoform" href="img/galerija/b_gf2.jpg"">
+                <img src="img/galerija/b_gf2.jpg"  class="img-responsive">
+            	</a>
+            </div>
+
+            <div class="gallery_product col-lg-4 col-md-4 col-sm-6 col-xs-6 filter optoform">
+            	<a class="thumbnail fancybox" rel="pogon" href="img/galerija/b_gf1.jpg">
+                <img src="img/galerija/b_gf1.jpg" class="img-responsive">
+            </a>
+            </div>
+
+            <div class="gallery_product col-lg-4 col-md-4 col-sm-6 col-xs-6 filter optoform">
+            	<a class="thumbnail fancybox" rel="pogon" href="img/galerija/b_gf5.jpg">
+                <img src="img/galerija/b_gf5.jpg" class="img-responsive">
+            </a>
+            </div>
+
+            <div class="gallery_product col-lg-4 col-md-4 col-sm-6 col-xs-6 filter optoform">
+            	<a class="thumbnail fancybox" rel="pogon" href="img/galerija/b_pg1.jpg">
+                <img src="img/galerija/b_pg1.jpg" class="img-responsive">
+            </a>
+            </div>
+
+
+            <div class="gallery_product col-lg-4 col-md-4 col-sm-6 col-xs-6 filter optoform">
+            	<a class="thumbnail fancybox" rel="pogon" href="img/galerija/b_pg2.jpg">
+                <img src="img/galerija/b_pg2.jpg" class="img-responsive">
+            </a>
+            </div>
+
+            <div class="gallery_product col-lg-4 col-md-4 col-sm-6 col-xs-6 filter optoform">
+            	<a class="thumbnail fancybox" rel="pogon" href="img/galerija/b_pg3.jpg">
+                <img src="img/galerija/b_pg3.jpg" class="img-responsive">
+            </a>
+            </div>
+
+            <div class="gallery_product col-lg-4 col-md-4 col-sm-6 col-xs-6 filter optoform">
+            	<a class="thumbnail fancybox" rel="pogon" href="img/galerija/b_pg4.jpg">
+                <img src="img/galerija/b_pg4.jpg" class="img-responsive">
+            </a>
+            </div>
+
+            <div class="gallery_product col-lg-4 col-md-4 col-sm-6 col-xs-6 filter optoform">
+            	<a class="thumbnail fancybox" rel="pogon" href="img/galerija/b_pg5.jpg">
+                <img src="img/galerija/b_pg5.jpg" class="img-responsive">
+            </a>
+            </div>
+
+            <div class="gallery_product col-lg-4 col-md-4 col-sm-6 col-xs-6 filter optoform">
+            	<a class="thumbnail fancybox" rel="pogon" href="img/galerija/b_gf3.jpg">
+                <img src="img/galerija/b_gf3.jpg" class="img-responsive">
+            </a>
+            </div>
+
+             <div class="gallery_product col-lg-4 col-md-4 col-sm-6 col-xs-6 filter optoform">
+             	<a class="thumbnail fancybox hidden-sm hidden-xs" rel="pogon" href="img/galerija/b_gf4.jpg">
+                <img src="img/galerija/b_gf4.jpg" class="img-responsive">
+            </a>
+            </div>
+
+            <div class="gallery_product col-lg-4 col-md-4 col-sm-6 col-xs-6 filter pogon">
+                <a class="thumbnail fancybox" rel="pogon" href="img/galerija/art1.jpg">
+                <img src="img/galerija/art1.jpg" class="img-responsive">
+            </a>
+            </div>
+
+            <div class="gallery_product col-lg-4 col-md-4 col-sm-6 col-xs-6 filter pogon">
+                <a class="thumbnail fancybox" rel="pogon" href="img/galerija/art2.jpg">
+                <img src="img/galerija/art2.jpg" class="img-responsive">
+            </a>
+            </div>
+
+            <div class="gallery_product col-lg-4 col-md-4 col-sm-6 col-xs-6 filter pogon">
+                <a class="thumbnail fancybox" rel="pogon" href="img/galerija/art3.jpg">
+                <img src="img/galerija/art3.jpg" class="img-responsive">
+            </a>
+            </div>
+
+            <div class="gallery_product col-lg-4 col-md-4 col-sm-6 col-xs-6 filter pogon">
+                <a class="thumbnail fancybox" rel="pogon" href="img/galerija/art4.jpg">
+                <img src="img/galerija/art4.jpg" class="img-responsive">
+            </a>
+            </div>
+
+            <div class="gallery_product col-lg-4 col-md-4 col-sm-6 col-xs-6 filter pogon">
+                <a class="thumbnail fancybox" rel="pogon" href="img/galerija/art5.jpg">
+                <img src="img/galerija/art5.jpg" class="img-responsive">
+            </a>
+            </div>
+
+            <div class="gallery_product col-lg-4 col-md-4 col-sm-6 col-xs-6 filter pogon">
+                <a class="thumbnail fancybox" rel="pogon" href="img/galerija/art6.jpg">
+                <img src="img/galerija/art6.jpg" class="img-responsive">
+            </a>
+            </div>
+
+            <div class="gallery_product col-lg-4 col-md-4 col-sm-6 col-xs-6 filter pogon">
+                <a class="thumbnail fancybox" rel="pogon" href="img/galerija/art7.jpg">
+                <img src="img/galerija/art7.jpg" class="img-responsive">
+            </a>
+            </div>
+
+            <div class="gallery_product col-lg-4 col-md-4 col-sm-6 col-xs-6 filter pogon">
+                <a class="thumbnail fancybox" rel="pogon" href="img/galerija/art8.jpg">
+                <img src="img/galerija/art8.jpg" class="img-responsive">
+            </a>
+            </div>
+
+            <div class="gallery_product col-lg-4 col-md-4 col-sm-6 col-xs-6 filter pogon">
+                <a class="thumbnail fancybox" rel="pogon" href="img/galerija/art9.jpg">
+                <img src="img/galerija/art9.jpg" class="img-responsive">
+            </a>
+            </div>
+
+            <div class="gallery_product col-lg-4 col-md-4 col-sm-6 col-xs-6 filter pogon">
+                <a class="thumbnail fancybox" rel="pogon" href="img/galerija/art10.jpg">
+                <img src="img/galerija/art10.jpg" class="img-responsive">
+            </a>
+            </div>
+
+        
+
+
+            <div class="gallery_product col-lg-4 col-md-4 col-sm-6 col-xs-6 filter zagreb">
+            	<a class="thumbnail fancybox" rel="zagreb" href="img/galerija/pros1.jpg">
+                <img src="img/galerija/pros1.jpg" class="img-responsive">
+            </a>
+            </div>
+
+            <div class="gallery_product col-lg-4 col-md-4 col-sm-6 col-xs-6 filter zagreb">
+            	<a class="thumbnail fancybox" rel="zagreb" href="img/galerija/pros2.jpg">
+                <img src="img/galerija/pros2.jpg" >
+            </a>
+            </div>
+
+            <div class="gallery_product col-lg-4 col-md-4 col-sm-6 col-xs-6 filter zagreb">
+            	<a class="thumbnail fancybox" rel="zagreb" href="img/galerija/pros7.jpg">
+                <img src="img/galerija/pros7.jpg" >
+            </a>
+            </div>
+
+            <div class="gallery_product col-lg-4 col-md-4 col-sm-6 col-xs-6 filter zagreb">
+            	<a class="thumbnail fancybox" rel="zagreb" href="img/galerija/pros4.jpg">
+                <img src="img/galerija/pros4.jpg" >
+            </a>
+            </div>
+
+            <div class="gallery_product col-lg-4 col-md-4 col-sm-6 col-xs-6 filter zagreb">
+            	<a class="thumbnail fancybox" rel="zagreb" href="img/galerija/pros5.jpg">
+                <img src="img/galerija/pros5.jpg" >
+            </a>
+            </div>
+
+             <div class="gallery_product col-lg-4 col-md-4 col-sm-6 col-xs-6 filter zagreb">
+                <a class="thumbnail fancybox" rel="zagreb" href="img/galerija/pros11.jpg">
+                <img src="img/galerija/pros11.jpg" >
+            </a>
+            </div>
+
+            <div class="gallery_product col-lg-4 col-md-4 col-sm-6 col-xs-6 filter zagreb">
+            	<a class="thumbnail fancybox" rel="zagreb" href="img/galerija/pros3.jpg">
+                <img src="img/galerija/pros3.jpg" >
+            </a>
+            </div>
+
+          
+
+            <div class="gallery_product col-lg-4 col-md-4 col-sm-6 col-xs-6 filter zagreb">
+                <a class="thumbnail fancybox" rel="zagreb" href="img/galerija/pros8.jpg">
+                <img src="img/galerija/pros8.jpg" >
+            </a>
+            </div>
+
+            <div class="gallery_product col-lg-4 col-md-4 col-sm-6 col-xs-6 filter zagreb">
+                <a class="thumbnail fancybox" rel="zagreb" href="img/galerija/pros9.jpg">
+                <img src="img/galerija/pros9.jpg" >
+            </a>
+            </div>
+
+            <div class="gallery_product col-lg-4 col-md-4 col-sm-6 col-xs-6 filter zagreb">
+                <a class="thumbnail fancybox hidden-lg hidden-md" rel="zagreb" href="img/galerija/pros10.jpg">
+                <img src="img/galerija/pros10.jpg" >
+            </a>
+            </div>
+
+        
+
+            <div class="gallery_product col-lg-4 col-md-4 col-sm-6 col-xs-6 filter split">
+            	<a class="thumbnail fancybox" rel="lightbox" href="img/galerija/nac1.jpg">
+                <img src="img/galerija/nac1.jpg" class="img-responsive">
+            </a>
+            </div>
+
+            <div class="gallery_product col-lg-4 col-md-4 col-sm-6 col-xs-6 filter split">
+            	<a class="thumbnail fancybox" rel="lightbox" href="img/galerija/nac2.jpg">
+                <img src="img/galerija/nac2.jpg" class="img-responsive">
+            </a>
+            </div>
+
+            <div class="gallery_product col-lg-4 col-md-4 col-sm-6 col-xs-6 filter split">
+            	<a class="thumbnail fancybox" rel="lightbox" href="img/galerija/nac3.jpg">
+                <img src="img/galerija/nac3.jpg" class="img-responsive">
+            </a>
+            </div>
+
+            <div class="gallery_product col-lg-4 col-md-4 col-sm-6 col-xs-6 filter split">
+            	<a class="thumbnail fancybox" rel="lightbox" href="img/galerija/nac4.jpg">
+                <img src="img/galerija/nac4.jpg" class="img-responsive">
+            </a>
+            </div>
+
+            <div class="gallery_product col-lg-4 col-md-4 col-sm-6 col-xs-6 filter split">
+            	<a class="thumbnail fancybox" rel="lightbox" href="img/galerija/nac5.jpg">
+                <img src="img/galerija/nac5.jpg" class="img-responsive">
+            </a>
+            </div>
+
+            <div class="gallery_product col-lg-4 col-md-4 col-sm-6 col-xs-6 filter split">
+                <a class="thumbnail fancybox" rel="lightbox" href="img/galerija/nac6.jpg">
+                <img src="img/galerija/nac6.jpg" class="img-responsive">
+            </a>
+            </div>
+
+            <div class="gallery_product col-lg-4 col-md-4 col-sm-6 col-xs-6 filter split">
+                <a class="thumbnail fancybox" rel="lightbox" href="img/galerija/nac7.jpg">
+                <img src="img/galerija/nac7.jpg" class="img-responsive">
+            </a>
+        </div>
+
+            <div class="gallery_product col-lg-4 col-md-4 col-sm-6 col-xs-6 filter split">
+                <a class="thumbnail fancybox" rel="lightbox" href="img/galerija/nac8.jpg">
+                <img src="img/galerija/nac8.jpg" class="img-responsive">
+            </a>
+        </div>
+
+        <div class="gallery_product col-lg-4 col-md-4 col-sm-6 col-xs-6 filter split">
+                <a class="thumbnail fancybox hidden-sm hidden-xs" rel="lightbox" href="img/galerija/nac9.jpg">
+                <img src="img/galerija/nac9.jpg" class="img-responsive">
+            </a>
+        </div>
+
+           
+
+             <div class="gallery_product col-lg-4 col-md-4 col-sm-6 col-xs-6 filter split">
+                <a class="thumbnail fancybox" rel="lightbox" href="img/galerija/nac10.jpg">
+                <img src="img/galerija/nac10.jpg" class="img-responsive">
+                </a>
+            </div>
+
+             <div class="gallery_product col-lg-4 col-md-4 col-sm-6 col-xs-6 filter split">
+                <a class="thumbnail fancybox" rel="lightbox" href="img/galerija/nac11.jpg">
+                <img src="img/galerija/nac11.jpg" class="img-responsive">
+                </a>
+            </div>
+
+             <div class="gallery_product col-lg-4 col-md-4 col-sm-6 col-xs-6 filter split">
+                <a class="thumbnail fancybox" rel="lightbox" href="img/galerija/nac12.jpg">
+                <img src="img/galerija/nac12.jpg" class="img-responsive">
+                </a>
+            </div>
+
+             <div class="gallery_product col-lg-4 col-md-4 col-sm-6 col-xs-6 filter split">
+                <a class="thumbnail fancybox" rel="lightbox" href="img/galerija/nac13.jpg">
+                <img src="img/galerija/nac13.jpg" class="img-responsive">
+                </a>
+            </div>
+
+             <div class="gallery_product col-lg-4 col-md-4 col-sm-6 col-xs-6 filter split">
+                <a class="thumbnail fancybox" rel="lightbox" href="img/galerija/nac14.jpg">
+                <img src="img/galerija/nac14.jpg" class="img-responsive">
+                </a>
+            </div>
+
+             <div class="gallery_product col-lg-4 col-md-4 col-sm-6 col-xs-6 filter split">
+                <a class="thumbnail fancybox" rel="lightbox" href="img/galerija/nac15.jpg">
+                <img src="img/galerija/nac15.jpg" class="img-responsive">
+                </a>
+            </div>
+
+             <div class="gallery_product col-lg-4 col-md-4 col-sm-6 col-xs-6 filter split">
+                <a class="thumbnail fancybox" rel="lightbox" href="img/galerija/nac16.jpg">
+                <img src="img/galerija/nac16.jpg" class="img-responsive">
+                </a>
+            </div>
+
+             <div class="gallery_product col-lg-4 col-md-4 col-sm-6 col-xs-6 filter split">
+                <a class="thumbnail fancybox" rel="lightbox" href="img/galerija/nac17.jpg">
+                <img src="img/galerija/nac17.jpg" class="img-responsive">
+                </a>
+            </div>
+
+             <div class="gallery_product col-lg-4 col-md-4 col-sm-6 col-xs-6 filter split">
+                <a class="thumbnail fancybox" rel="lightbox" href="img/galerija/nac18.jpg">
+                <img src="img/galerija/nac18.jpg" class="img-responsive">
+                </a>
+            </div>
+
+             <div class="gallery_product col-lg-4 col-md-4 col-sm-6 col-xs-6 filter split">
+                <a class="thumbnail fancybox hidden-md hidden-lg" rel="lightbox" href="img/galerija/nac19.jpg">
+                <img src="img/galerija/nac19.jpg" class="img-responsive">
+                </a>
+            </div>
+
+
+
+        </div>
+    </div>
+</section>
+	<div class="footer">
+		<p>&copy; OPTO CONTACT 2017. Sva prava pridržana</p>
+	</div>
+	</body>
